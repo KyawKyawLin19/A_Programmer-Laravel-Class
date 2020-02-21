@@ -40,3 +40,9 @@ SELECT * FROM `users` LIMIT 4,2;
 SELECT * FROM `users` ORDER BY id DESC;
 SELECT * FROM `users` ORDER BY id ASC;
 SELECT * FROM `users` WHERE name LIKE '%te%';
+SELECT * FROM `users` INNER JOIN `class` ON users.id=class.user_id;
+SELECT * FROM `users` LEFT JOIN `class` ON users.id=class.user_id;
+SELECT * FROM `users` RIGHT JOIN `class` ON users.id=class.user_id;
+SELECT * FROM `users` LEFT JOIN `class` ON users.id=class.user_id 
+UNION 
+SELECT * FROM `users` RIGHT JOIN `class` ON users.id=class.user_id;
