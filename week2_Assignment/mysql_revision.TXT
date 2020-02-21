@@ -10,6 +10,12 @@ CREATE TABLE class(id INT(11) PRIMARY KEY AUTO_INCREMENT,
                    user_id INT(11)); 
 
 INSERT INTO `users`(`id`, `name`, `email`) VALUES (1,'aa','aa@gmail.com');
+ALTER TABLE `users` ADD COLUMN `digit` VARCHAR(100) NOT NULL;
+ALTER TABLE `users` CHANGE COLUMN `digit` `price` VARCHAR(100) NOT NULL;
+ALTER TABLE `users` ADD COLUMN `testing_column` VARCHAR(100) NOT NULL;
+ALTER TABLE `users` DROP COLUMN `testing_column`;
+RENAME TABLE `users` TO `testing_table`;
+DROP TABLE testing_table;
 
 SELECT * FROM `users`;
 SELECT * FROM `users` WHERE id=1;
@@ -19,3 +25,8 @@ SELECT * FROM `users` WHERE id>=1;
 SELECT * FROM `users` WHERE id<=1;
 SELECT * FROM `users` WHERE id<>1;
 SELECT * FROM `users` WHERE id!=1;
+SELECT name,email FROM `users`;
+SELECT * FROM `users` WHERE email='aa@gmail.com';
+SELECT * FROM `users` WHERE id IN(1,3,6);
+SELECT * FROM `users` WHERE id NOT IN(1,3,6);
+
