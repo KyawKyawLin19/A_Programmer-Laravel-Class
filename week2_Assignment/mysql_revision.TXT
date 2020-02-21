@@ -29,4 +29,14 @@ SELECT name,email FROM `users`;
 SELECT * FROM `users` WHERE email='aa@gmail.com';
 SELECT * FROM `users` WHERE id IN(1,3,6);
 SELECT * FROM `users` WHERE id NOT IN(1,3,6);
-
+SELECT COUNT(*) FROM `users`;
+SELECT COUNT(`id`) FROM `users`;
+SELECT MAX(`price`) FROM `users`;
+SELECT MIN(`price`) FROM `users`;
+SELECT AVG(`price`) FROM `users`;
+SELECT SUM(`price`) FROM `users`;
+SELECT * FROM `users` LIMIT 2;
+SELECT * FROM `users` LIMIT 4,2;
+SELECT * FROM `users` ORDER BY id DESC;
+SELECT * FROM `users` ORDER BY id ASC;
+SELECT * FROM `users` WHERE name LIKE '%te%';
